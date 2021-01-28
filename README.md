@@ -10,15 +10,15 @@ Used tecnologies
 
 ## API Gateway
 
-**Url: https://localhost/7000
-Swagger: https://localhost/7000/swagger**
+**Url: https://localhost/7000**
+**Swagger: https://localhost/7000/swagger**
 
 ## API TaxaJuros
 
-**Url: https://localhost/7001
-Swagger: https://localhost/7001/swagger**
+**Url: https://localhost/7001**
+**Swagger: https://localhost/7001/swagger**
 
 ## API CalculaJuros
 
-**Url: https://localhost/7002
-Swagger: https://localhost/7002/swagger**
+**Url: https://localhost/7002**
+**Swagger: https://localhost/7002/swagger**
