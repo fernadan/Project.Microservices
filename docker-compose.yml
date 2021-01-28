@@ -1,0 +1,24 @@
+version: '3.4'
+
+services:
+  project.microservices:
+    image: ${DOCKER_REGISTRY-}projectmicroservices
+    build:
+      context: .
+      dockerfile: Project.Microservices/Dockerfile
+    ports:
+        - "7000"
+  api.taxajuros:
+    image: ${DOCKER_REGISTRY-}apitaxajuros
+    build:
+      context: .
+      dockerfile: Services/API.TaxaJuros/Dockerfile
+    ports:
+        - "7001"
+  api.calculajuros:
+    image: ${DOCKER_REGISTRY-}apicalculajuros
+    build:
+      context: .
+      dockerfile: Services/API.CalculaJuros/Dockerfile
+    ports:
+        - "7002"
