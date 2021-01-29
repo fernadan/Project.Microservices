@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using NSwag.Annotations;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,6 +9,7 @@ namespace API.CalculaJuros.Controllers
 {
     [ApiController]
     [Route("[controller]")]
+    [OpenApiTag("Calcula o Juros")]
     public class CalculaJurosController : Controller
     {
         /// <summary>

@@ -1,0 +1,64 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/taxajuros",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Port": 80,
+          "Host": "api.taxajuros"
+        }
+      ],
+      "UpstreamPathTemplate": "/taxajuros",
+      "UpstreamHttpMethod": [ "Get" ],
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "1s",
+        "PeriodTimespan": 1,
+        "Limit": 1
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/showmethecode",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Port": 80,
+          "Host": "api.calculajuros"
+        }
+      ],
+      "UpstreamPathTemplate": "/showmethecode",
+      "UpstreamHttpMethod": [ "Get" ],
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "1s",
+        "PeriodTimespan": 1,
+        "Limit": 1
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/calculajuros/{everithing}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Port": 80,
+          "Host": "api.calculajuros"
+        }
+      ],
+      "UpstreamPathTemplate": "/calculajuros/{everithing}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "1s",
+        "PeriodTimespan": 1,
+        "Limit": 1
+      }
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl":  "http://localhost:7000"
+  }
+}

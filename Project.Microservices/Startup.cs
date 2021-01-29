@@ -11,6 +11,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Docs.Swagger;
+using Ocelot.DependencyInjection;
+using Ocelot.Middleware;
 
 namespace Project.Microservices
 {
@@ -29,6 +31,8 @@ namespace Project.Microservices
             services.AddControllers();
 
             services.ConfigureSwaggerDoc("API Gateway Project.Microservices");
+
+            services.AddOcelot();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -51,6 +55,8 @@ namespace Project.Microservices
             });
 
             app.ConfigureSwaggerUI();
+
+            app.UseOcelot().Wait();
         }
     }
 }
