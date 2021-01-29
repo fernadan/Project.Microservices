@@ -17,7 +17,7 @@ namespace Test
             double valorFinal = Math.Truncate((valorInicial * Math.Pow((1.0 + 0.01), meses)) * 100) / 100;
 
             var calculaJuros = new CalculaJurosController();
-            Assert.Equal(valorFinal, calculaJuros.Index(valorInicial, meses), 2);
+            Assert.Equal(valorFinal, double.Parse(calculaJuros.Index(valorInicial, meses).Result), 2);
         }
     }
 }

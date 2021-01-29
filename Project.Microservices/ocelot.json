@@ -39,7 +39,7 @@
       }
     },
     {
-      "DownstreamPathTemplate": "/calculajuros/{everithing}",
+      "DownstreamPathTemplate": "/calculajuros?valorinicial={valorinicial}&meses={meses}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -47,7 +47,7 @@
           "Host": "api.calculajuros"
         }
       ],
-      "UpstreamPathTemplate": "/calculajuros/{everithing}",
+      "UpstreamPathTemplate": "/calculajuros?valorinicial={valorinicial}&meses={meses}",
       "UpstreamHttpMethod": [ "Get" ],
       "RateLimitOptions": {
         "ClientWhitelist": [],
